@@ -57,7 +57,7 @@ particular Bugzilla instance during ticket creation:
 edit()
 ~~~~~~
 
-.. code:: language
+.. code:: python
 
     edit(self, \*\*kwargs)
 
