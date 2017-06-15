@@ -27,7 +27,7 @@ Table of contents
 create()
 ~~~~~~~~
 
-* create(self, summary, description, \*\*kwargs)
+``create(self, summary, description, \*\*kwargs)``
 
 Creates a ticket. The required parameters for ticket creation are
 summary and description. Keyword arguments are used for other ticket
