@@ -1,5 +1,5 @@
-ticketutil.bugzilla
-===================
+bugzilla
+=========
 
 This document contains information on the methods available when working
 with a BugzillaTicket object. A list of the Bugzilla fields that have
@@ -18,14 +18,17 @@ Table of contents
 
 -  `create() <#create>`__
 -  `edit() <#edit>`__
--  `add\_comment() <#comment>`__
--  `change\_status() <#status>`__
--  `remove\_cc() <#remove_cc>`__
--  `add\_cc() <#add_cc>`__
--  `add\_attachment() <#add_attachment>`__
+-  `add_comment() <#comment>`__
+-  `change_status() <#status>`__
+-  `remove_cc() <#remove_cc>`__
+-  `add_cc() <#add_cc>`__
+-  `add_attachment() <#add_attachment>`__
 
+create()
+~~~~~~~~
+
+.. code-block:: python
 create(self, summary, description, \*\*kwargs)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creates a ticket. The required parameters for ticket creation are
 summary and description. Keyword arguments are used for other ticket
@@ -52,8 +55,11 @@ particular Bugzilla instance during ticket creation:
     alias='SomeAlias'
     groups='GroupName'
 
+edit()
+~~~~~~
+
+.. code-block:: python
 edit(self, \*\*kwargs)
-~~~~~~~~~~~~~~~~~~~~~~~
 
 Edits fields in a Bugzilla ticket. Keyword arguments are used to specify
 ticket fields.
@@ -77,8 +83,11 @@ particular Bugzilla instance during ticket editing:
     alias='SomeAlias'
     groups='Group Name'
 
-add\_comment(self, comment,\*\*kwargs )
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+add_comment()
+~~~~~~~~~~~~~
+
+.. code:: python
+add_comment(self, comment,\*\*kwargs )
 
 Adds a comment to a Bugzilla ticket. Keyword arguments are used to
 specify comment options.
@@ -87,8 +96,11 @@ specify comment options.
 
     t.add_comment('Test comment')
 
+change_status()
+~~~~~~~~~~~~~~
+
+.. code:: python
 change\_status(self, status, \*\*kwargs)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Changes status of a Bugzilla ticket. Some status changes require a
 secondary field (i.e. resolution). Specify this as a keyword argument. A
@@ -100,8 +112,11 @@ bug ID.
     t.change_status('NEW')
     t.change_status('CLOSED', resolution='DUPLICATE', dupe_of='<bug_id>')
 
-remove\_cc(self, user)
-~~~~~~~~~~~~~~~~~~~~~~~
+remove_cc()
+~~~~~~~~~~~
+
+.. code:: python
+remove_cc(self, user)
 
 Removes user(s) from CC List of a Bugzilla ticket. Accepts a string
 representing one user's email address, or a list of strings for multiple
@@ -111,8 +126,11 @@ users.
 
     t.remove_cc('username@mail.com')
 
+add_cc()
+~~~~~~~~
+
+.. code:: python
 add\_cc(self, user)
-~~~~~~~~~~~~~~~~~~~~
 
 Adds user(s) to CC List of a Bugzilla ticket. Accepts a string
 representing one user's email address, or a list of strings for multiple
@@ -122,8 +140,11 @@ users.
 
     t.add_cc(['username1@mail.com', 'username2@mail.com'])
 
-add\_attachment(self, file\_name, data, summary, \*\*kwargs )
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+add_attachment()
+~~~~~~~~~~~~~~~~
+
+.. code:: python
+add_attachment(self, file\_name, data, summary, \*\*kwargs )
 
 Add attachment in a Bugzilla ticket. Keyword arguments are used to
 specify additional attachment options.
