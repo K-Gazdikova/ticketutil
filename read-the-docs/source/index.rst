@@ -42,11 +42,8 @@ Simplify all of your ticketing operations with ticketutil:
 
    Installation
    Usage
-   #JIRA
-   #RT
-   #Redmine
    Bugzilla
-   #ServiceNow
+
 
 
 Indices and tables
