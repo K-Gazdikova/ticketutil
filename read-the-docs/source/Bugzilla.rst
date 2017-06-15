@@ -57,9 +57,7 @@ particular Bugzilla instance during ticket creation:
 edit()
 ~~~~~~
 
-.. code:: python
-
-    edit(self, \*\*kwargs)
+``edit(self, \*\*kwargs)``
 
 Edits fields in a Bugzilla ticket. Keyword arguments are used to specify
 ticket fields.
@@ -86,9 +84,7 @@ particular Bugzilla instance during ticket editing:
 add_comment()
 ~~~~~~~~~~~~~
 
-.. code:: python
-
-    add_comment(self, comment,\*\*kwargs )
+``add_comment(self, comment,\*\*kwargs )``
 
 Adds a comment to a Bugzilla ticket. Keyword arguments are used to
 specify comment options.
@@ -100,9 +96,7 @@ specify comment options.
 change_status()
 ~~~~~~~~~~~~~~~
 
-.. code:: python
-
-    change\_status(self, status, \*\*kwargs)
+``change\_status(self, status, \*\*kwargs)``
 
 Changes status of a Bugzilla ticket. Some status changes require a
 secondary field (i.e. resolution). Specify this as a keyword argument. A
@@ -117,9 +111,7 @@ bug ID.
 remove_cc()
 ~~~~~~~~~~~
 
-.. code:: python
-
-    remove_cc(self, user)
+``remove_cc(self, user)``
 
 Removes user(s) from CC List of a Bugzilla ticket. Accepts a string
 representing one user's email address, or a list of strings for multiple
@@ -132,9 +124,7 @@ users.
 add_cc()
 ~~~~~~~~
 
-.. code:: python
-
-    add\_cc(self, user)
+``add_cc(self, user)``
 
 Adds user(s) to CC List of a Bugzilla ticket. Accepts a string
 representing one user's email address, or a list of strings for multiple
@@ -147,9 +137,7 @@ users.
 add_attachment()
 ~~~~~~~~~~~~~~~~
 
-.. code:: python
-
-    add_attachment(self, file\_name, data, summary, \*\*kwargs )
+``add_attachment(self, file\_name, data, summary, \*\*kwargs )``
 
 Add attachment in a Bugzilla ticket. Keyword arguments are used to
 specify additional attachment options.
